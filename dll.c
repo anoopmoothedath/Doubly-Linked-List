@@ -83,6 +83,20 @@ NODE insertAtPosition(NODE first, int position, int data){
 	return first;
 }
 
+NODE deleteFromBegin(NODE first){
+	NODE lastnode = first;
+	if(lastnode->next == NULL){
+		first = NULL;
+	}
+	else{
+		first = first->next;
+		first->prev = NULL;
+	}
+	printf("\tThe deleted element from DLL : %d\n",lastnode->data);
+	free(lastnode);
+	return first;
+}
+
 int countDLL(NODE first){
 	NODE temp;
 	temp = createNode();

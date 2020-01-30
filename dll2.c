@@ -11,7 +11,8 @@ void main(){
 		printf("\n      -----------------------");
 		printf("\n\tDOUBLY LINKED LIST");
 		printf("\n      -----------------------");
-		printf("\n\t1.Insert at end.\n\t2.Insert at beginning.\n\t3.Insert at specific position.");
+		printf("\n\t1.Insert at end.\n\t2.Insert at beginning.\n\t3.Insert at specific position.\n");
+		printf("\t4.Deletion from beginning.");
 		printf("\n\t7.Count the no.of nodes.\n\t8.Traverse the list.\n\t9.Exit.");
 		scanf("%d", &op);
 		switch(op){
@@ -31,6 +32,14 @@ void main(){
 				printf("\n\tEnter an element : ");
 				scanf("%d", &x);
 				first = insertAtPosition(first, pos, x);
+				break;
+			case 4:
+				if(first == NULL){
+					printf("\n\tDoubly Linked List is empty so deletion is not possible.");
+				}
+				else{
+					first = deleteFromBegin(first);
+				}
 				break;
 			case 7:
 				printf("\tThe number of nodes in a DLL are : %d\n", countDLL(first));
