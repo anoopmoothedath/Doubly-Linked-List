@@ -97,6 +97,23 @@ NODE deleteFromBegin(NODE first){
 	return first;
 }
 
+NODE deleteFromEnd(NODE first){
+	NODE lastnode = first;
+	NODE temp;
+	if(first->next == NULL){
+		first = NULL;
+	}else{
+		while(lastnode->next != NULL){
+			temp = lastnode;
+			lastnode = lastnode->next;
+		}
+		temp->next = NULL;
+	}
+	printf("\tThe deleted element from DLL : %d\n",lastnode->data);
+	free(lastnode);
+	return first;
+}
+
 int countDLL(NODE first){
 	NODE temp;
 	temp = createNode();
