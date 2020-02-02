@@ -1,2 +1,6 @@
 # Doubly-Linked-List
-This is a C program for doubly linked list. Various operations done on the DLL are insertion (beginning, specific position, end), traversal and count of the nodes. 
+This is a C program for doubly linked list. This DLL program has various operations : 
+* Insertion (at the beginning, at end & at specific position)
+* Deletion (from beginning & end)
+* Count of the nodes
+* Traversal of DLL
